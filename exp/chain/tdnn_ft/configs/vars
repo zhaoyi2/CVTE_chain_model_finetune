@@ -1,0 +1,3 @@
+model_left_context=13
+model_right_context=9
+num_hidden_layers=1

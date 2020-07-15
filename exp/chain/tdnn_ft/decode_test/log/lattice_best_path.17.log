@@ -1,0 +1,7 @@
+# ali-to-phones --per-frame=true exp/chain/tdnn_train/decode_test/../final.mdl "ark:gunzip -c exp/chain/tdnn_train/decode_test/ali_tmp.17.gz|" ark,t:- | paste /dev/stdin <( gunzip -c exp/chain/tdnn_train/decode_test/depth_tmp.17.gz ) | awk '{ half=NF/2; for (n=2; n<=half; n++) { m=n+half; count[$n " " $m]++;}} END{for(k in count) print k, count[k]; }' | gzip -c > exp/chain/tdnn_train/decode_test/depth_stats_tmp.17.gz 
+# Started at Wed Jul 15 09:45:27 CST 2020
+#
+ali-to-phones --per-frame=true exp/chain/tdnn_train/decode_test/../final.mdl 'ark:gunzip -c exp/chain/tdnn_train/decode_test/ali_tmp.17.gz|' ark,t:- 
+LOG (ali-to-phones[5.4]:main():ali-to-phones.cc:134) Done 363 utterances.
+# Accounting: time=0 threads=1
+# Ended (code 0) at Wed Jul 15 09:45:27 CST 2020, elapsed time 0 seconds

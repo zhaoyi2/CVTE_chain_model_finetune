@@ -1,0 +1,724 @@
+# nnet3-latgen-faster --frame-subsampling-factor=3 --frames-per-chunk=50 --extra-left-context=0 --extra-right-context=0 --extra-left-context-initial=-1 --extra-right-context-final=-1 --minimize=false --max-active=7000 --min-active=200 --beam=15.0 --lattice-beam=8.0 --acoustic-scale=1.0 --allow-partial=true --word-symbol-table=exp/chain/tdnn/graph_new/words.txt exp/chain/tdnn_train/final.mdl exp/chain/tdnn/graph_new/HCLG.fst "ark,s,cs:apply-cmvn-online --norm-means=false --norm-vars=false --spk2utt=ark:data/test/split20/13/spk2utt  exp/chain/tdnn_train/decode_test/global_cmvn.stats  scp:data/test/split20/13/feats.scp ark:- |" "ark:|lattice-scale --acoustic-scale=10.0 ark:- ark:- | gzip -c >exp/chain/tdnn_train/decode_test/lat.13.gz" 
+# Started at Wed Jul 15 09:23:10 CST 2020
+#
+nnet3-latgen-faster --frame-subsampling-factor=3 --frames-per-chunk=50 --extra-left-context=0 --extra-right-context=0 --extra-left-context-initial=-1 --extra-right-context-final=-1 --minimize=false --max-active=7000 --min-active=200 --beam=15.0 --lattice-beam=8.0 --acoustic-scale=1.0 --allow-partial=true --word-symbol-table=exp/chain/tdnn/graph_new/words.txt exp/chain/tdnn_train/final.mdl exp/chain/tdnn/graph_new/HCLG.fst 'ark,s,cs:apply-cmvn-online --norm-means=false --norm-vars=false --spk2utt=ark:data/test/split20/13/spk2utt  exp/chain/tdnn_train/decode_test/global_cmvn.stats  scp:data/test/split20/13/feats.scp ark:- |' 'ark:|lattice-scale --acoustic-scale=10.0 ark:- ark:- | gzip -c >exp/chain/tdnn_train/decode_test/lat.13.gz' 
+LOG (nnet3-latgen-faster[5.4]:RemoveOrphanNodes():nnet-nnet.cc:948) Removed 1 orphan nodes.
+LOG (nnet3-latgen-faster[5.4]:RemoveOrphanComponents():nnet-nnet.cc:847) Removing 2 orphan components.
+LOG (nnet3-latgen-faster[5.4]:Collapse():nnet-utils.cc:1336) Added 1 components, removed 2
+lattice-scale --acoustic-scale=10.0 ark:- ark:- 
+apply-cmvn-online --norm-means=false --norm-vars=false --spk2utt=ark:data/test/split20/13/spk2utt exp/chain/tdnn_train/decode_test/global_cmvn.stats scp:data/test/split20/13/feats.scp ark:- 
+LOG (nnet3-latgen-faster[5.4]:CheckAndFixConfigs():nnet-am-decodable-simple.cc:294) Increasing --frames-per-chunk from 50 to 51 to make it a multiple of --frame-subsampling-factor=3
+BAC009S0906W0121 令 市场 看扁 人民 币 的 情绪 持续 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0121 is 2.18699 over 206 frames.
+BAC009S0906W0122 人民 币 未来 贬值 压力 依然 较大 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0122 is 2.4043 over 143 frames.
+BAC009S0906W0123 预计 短期 央行 仍 可能 会 积极 维 稳 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0123 is 2.12747 over 214 frames.
+BAC009S0906W0124 汇率 较大 概率 维持 双向 波动 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0124 is 2.24829 over 170 frames.
+BAC009S0906W0125 公积金 松绑 揭榜 房价 下跌 动力 趋缓 制 搜狐 财经 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0125 is 2.1245 over 324 frames.
+BAC009S0906W0126 上海 南昌 等 城市 近期 继续 松绑 了 公积金 贷款 政策 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0126 is 2.28925 over 238 frames.
+BAC009S0906W0127 而 南昌 除了 放松 套房 界 标准 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0127 is 2.10531 over 225 frames.
+BAC009S0906W0128 还 降低 了 套房 公积金 首 付 比例 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0128 is 2.22975 over 172 frames.
+BAC009S0906W0129 公积金 贷款 首 付款 比例 不 低于 百分 之 七 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0129 is 2.57504 over 165 frames.
+BAC009S0906W0130 上海 <SPOKEN_NOISE> 研究 院 研究 院 严 跃进 认为 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0130 is 2.16995 over 226 frames.
+BAC009S0906W0131 存 销 比 已经 见 顶 回落 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0131 is 2.26005 over 109 frames.
+BAC009S0906W0132 房价 下跌 压力 将 去 环节 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0132 is 2.3309 over 126 frames.
+BAC009S0906W0133 公积金 大力 度 松绑 相关 商业 银行 信贷 政策 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0133 is 2.32695 over 217 frames.
+BAC009S0906W0134 各地 公积金 贷款 的 松绑 力度 更 大 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0134 is 2.26014 over 175 frames.
+BAC009S0906W0135 江苏 省 对 省级 机关 住房 公积金 政策 作出 了 调整 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0135 is 2.37254 over 179 frames.
+BAC009S0906W0136 昆明 市 住房 公积金 管理 中心 出台 三项 公积金 新政 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0136 is 2.35257 over 244 frames.
+BAC009S0906W0137 上海 市 公积金 管理 中心 公布 公积金 新政 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0137 is 2.35231 over 201 frames.
+BAC009S0906W0138 有 一 套 <SPOKEN_NOISE> 房 并 已 结清 公积金 贷款 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0138 is 2.26574 over 174 frames.
+BAC009S0906W0139 再次 申请 公积金 贷款 的 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0139 is 2.22619 over 191 frames.
+BAC009S0906W0140 参照 套房 贷款 政策 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0140 is 2.28304 over 116 frames.
+BAC009S0906W0141 中原 地产 市场 研究 部 统计 数据 显示 截至 目前 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0141 is 2.51182 over 236 frames.
+BAC009S0906W0142 二 套房 执行 <SPOKEN_NOISE> 房 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0142 is 2.01473 over 144 frames.
+BAC009S0906W0143 二 套房 首 付 将 比 百分 之 七 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0143 is 2.37123 over 114 frames.
+BAC009S0906W0144 南京 市 放宽 的 二 套房 公积金 贷款 门槛 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0144 is 2.26317 over 204 frames.
+BAC009S0906W0145 扬州 杭州 成都 等 地 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0145 is 2.10573 over 140 frames.
+BAC009S0906W0146 已有 一 套 租房 并 结清 贷款 的 家庭 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0146 is 2.23531 over 160 frames.
+BAC009S0906W0147 在 执行 首 套房 贷 政策 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0147 is 2.08257 over 158 frames.
+BAC009S0906W0148 中原 地产 分析 师 张大 伟 认为 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0148 is 2.68161 over 121 frames.
+BAC009S0906W0149 公积金 是 地方 政府 可以 直接 通过 政策 调整 动用 的 资金 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0149 is 2.27442 over 212 frames.
+BAC009S0906W0150 用 公积金 政策 刺激 市场 是 地方 政府 最 习惯 的 举措 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0150 is 2.27241 over 210 frames.
+BAC009S0906W0151 对 <SPOKEN_NOISE> 者 心理 影响 也 非常 大 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0151 is 2.22513 over 123 frames.
+BAC009S0906W0152 由于 公积金 贷款 利率 相当 于 市场 贷款 利率 的 曲折 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0152 is 2.29551 over 204 frames.
+BAC009S0906W0153 对 需求 作用 比较 大 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0153 is 2.26301 over 114 frames.
+BAC009S0906W0154 上海 作为 一 线 城市 代表 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0154 is 2.46066 over 104 frames.
+BAC009S0906W0155 对 <SPOKEN_NOISE> 产 市场 的 心理 影响 比较 大 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0155 is 2.37438 over 134 frames.
+BAC009S0906W0156 预计 还有 其他 城市 将 发 不 同类 型 松绑 政策 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0156 is 2.47155 over 191 frames.
+BAC009S0906W0157 房价 下跌 压力 缓解 各地 救市 政策 不 断 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0157 is 2.30097 over 188 frames.
+BAC009S0906W0158 促销 力度 也 在 加大 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0158 is 2.11799 over 130 frames.
+BAC009S0906W0159 各 城市 库存 压力 正在 甜 笑 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0159 is 2.44944 over 120 frames.
+BAC009S0906W0160 房价 下跌 压力 趋于 缓解 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0160 is 2.41187 over 115 frames.
+BAC009S0906W0161 上海 <SPOKEN_NOISE> 产 研究 院 数据 显示 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0161 is 2.38623 over 166 frames.
+BAC009S0906W0162 同比 增长 百分 之 七 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0162 is 2.49569 over 112 frames.
+BAC009S0906W0163 这 是 今年 五月 份 以来 库存 同比 增幅 最 小 的 一 次 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0163 is 2.16594 over 231 frames.
+BAC009S0906W0164 同比 增长 百分 之 七 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0164 is 2.42375 over 83 frames.
+BAC009S0906W0165 同比 减少 百分 之 七 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0165 is 2.55583 over 95 frames.
+BAC009S0906W0166 五月 份 的 供求 关系 是 今年 前 五 个 月 最 均衡 的 一 次 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0166 is 2.32917 over 255 frames.
+BAC009S0906W0167 存 销 比 见 顶 的 态势 基本 确立 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0167 is 2.26077 over 183 frames.
+BAC009S0906W0168 五 个 城市 新建 商品 住宅 存 销 比 为 七 个 月 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0168 is 2.27964 over 204 frames.
+BAC009S0906W0169 该 存 销 比 数值 为 七 个 月 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0169 is 2.24774 over 117 frames.
+BAC009S0906W0170 这 直接 利好 去 库存 目标 的 实现 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0170 is 2.33806 over 199 frames.
+BAC009S0906W0171 二 到 五 个 城市 的 总体 水平 看 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0171 is 2.31857 over 122 frames.
+BAC009S0906W0172 库存 去 化 周期 然 偏 大 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0172 is 2.27425 over 164 frames.
+BAC009S0906W0173 说明 各 城市 涨价 的 时机 还 不 成熟 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0173 is 2.3562 over 139 frames.
+BAC009S0906W0174 一 至 七 月份 大多 数 城市 还是 会 采取 积极 降价 的 策略 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0174 is 2.16432 over 244 frames.
+BAC009S0906W0175 房价 未来 可能 会 略微 下跌 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0175 is 2.14164 over 120 frames.
+BAC009S0906W0176 一 线 城市 由于 需求 面 大 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0176 is 2.42873 over 113 frames.
+BAC009S0906W0177 未来 住宅 价格 会 <SPOKEN_NOISE> 回升 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0177 is 2.15082 over 180 frames.
+BAC009S0906W0178 一些 存量 较大 的 <SPOKEN_NOISE> 线 城市 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0178 is 2.3071 over 124 frames.
+BAC009S0906W0179 房价 继续 下行 的 可能 性 仍然 比较 大 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0179 is 2.43417 over 129 frames.
+BAC009S0906W0180 红色 咨询 研究 部 总监 张 宏伟 认为 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0180 is 2.30341 over 181 frames.
+BAC009S0906W0181 月度 市场 成交 量 开始 出现 回升 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0181 is 2.42982 over 152 frames.
+BAC009S0906W0182 市场 去 库存 的 速度 在 适度 提高 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0182 is 2.36162 over 137 frames.
+BAC009S0906W0183 从 一 线 城市 及 存 销 比 在 七 个 月 以下 的 城市 来看 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0183 is 2.24608 over 211 frames.
+BAC009S0906W0184 市场 基本 面 有 可能 会 率先 好转 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0184 is 2.23186 over 184 frames.
+BAC009S0906W0185 年底 将 出现 行情 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0185 is 2.03988 over 126 frames.
+BAC009S0906W0186 但 年底 出现 翘 尾 行情 并 不 代表 楼市 已经 回暖 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0186 is 2.19442 over 219 frames.
+BAC009S0906W0187 示范 性 带动 周边 地区 发展 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0187 is 2.42396 over 121 frames.
+BAC009S0906W0188 并 在 农业 走出 去 方面 发挥 重要 作用 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0188 is 2.30307 over 180 frames.
+BAC009S0906W0189 稳步 发展 区域 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0189 is 2.55686 over 79 frames.
+BAC009S0906W0190 主要 只 草 原生 态 经济 区 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0190 is 2.10708 over 136 frames.
+BAC009S0906W0191 包括 北方 干旱 干旱 桃园 地区 和 青藏高原 草原 地区 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0191 is 1.91676 over 236 frames.
+BAC009S0906W0192 加快 干 的 区域 现代 农业 建设 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0192 is 2.25792 over 155 frames.
+BAC009S0906W0193 对于 全国 生态 安全 具有 不 可 代替 的 战略 作用 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0193 is 2.23757 over 223 frames.
+BAC009S0906W0194 牢固 树立 生产 生态 有 机 结合 生态 优先 的 基本 方针 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0194 is 2.1914 over 265 frames.
+BAC009S0906W0195 加强 草原 生态 环境 保护 和 建设 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0195 is 2.35598 over 134 frames.
+BAC009S0906W0196 稳步 推进 还 草 和 由 牧民 定居 工程 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0196 is 2.19317 over 212 frames.
+BAC009S0906W0197 加强 以 节水 灌溉 的 为重 点 的 牧区 水利 建设 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0197 is 1.99375 over 277 frames.
+BAC009S0906W0198 建立 草原 增加 碳汇 和 生态 补偿 机制 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0198 is 2.0652 over 173 frames.
+BAC009S0906W0199 转变 畜牧 业 发展 方式 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0199 is 2.26169 over 142 frames.
+BAC009S0906W0200 优化 生产 布局 和 旭 群 结构 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0200 is 2.24072 over 153 frames.
+BAC009S0906W0201 提高 科学 饲养 和 经营 水平 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0201 is 2.21659 over 116 frames.
+BAC009S0906W0202 加强 农牧 互补 牧养 结合 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0202 is 2.00231 over 133 frames.
+BAC009S0906W0203 以 最 急需 最 关键 最 薄弱 环节 和 领域 为 重点 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0203 is 2.12904 over 268 frames.
+BAC009S0906W0204 组织 实施 一批 重大 工程 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0204 is 2.34549 over 110 frames.
+BAC009S0906W0205 全面 分时 现代 农业 发展 的 物质 基础 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0205 is 2.15547 over 219 frames.
+BAC009S0906W0206 以 旱涝保收 <SPOKEN_NOISE> 标准 农田 建设 工程 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0206 is 2.32375 over 196 frames.
+BAC009S0906W0207 落实 土壤 改良 地 <SPOKEN_NOISE> 例 陪 等 措施 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0207 is 1.9404 over 249 frames.
+BAC009S0906W0208 加快 先进 适用 更 做 技术 推广 应用 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0208 is 2.17299 over 161 frames.
+BAC009S0906W0209 新建 旱涝保收 告 标准 农田 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0209 is 1.8219 over 176 frames.
+BAC009S0906W0210 新增 轻易 斤 粮食 生产 能力 建设 工程 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0210 is 2.22088 over 164 frames.
+BAC009S0906W0211 生产 基地 建设 工程 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0211 is 2.27609 over 117 frames.
+BAC009S0906W0212 加强 黄 淮海地区 长江流域 生产 基地 建设 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0212 is 2.13015 over 270 frames.
+BAC009S0906W0213 支持 男方 者 和 北方 田赛 生产 基地 建设 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0213 is 2.15795 over 203 frames.
+BAC009S0906W0214 着力 改善 田间 基础 设施 两种 科研 繁育 设施 等 生产 条件 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0214 is 2.13074 over 267 frames.
+BAC009S0906W0215 新 一轮 菜篮子 建设 工程 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0215 is 2.3233 over 104 frames.
+BAC009S0906W0216 加强 原义 作物 标准 原 建设 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0216 is 2.08435 over 154 frames.
+BAC009S0906W0217 引导 建设 优质 农产品 物流 配送 公斤 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0217 is 2.30966 over 163 frames.
+BAC009S0906W0218 发展 农产 品 电子 商务 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0218 is 2.336 over 99 frames.
+BAC009S0906W0219 健全 农作物 至 资源 和 旭 群 遗传 资源 保存 体系 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0219 is 2.05709 over 464 frames.
+BAC009S0906W0220 建设 动 植物 基因 信息 户 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0220 is 2.23805 over 112 frames.
+BAC009S0906W0221 建立 转 基因 生物 安全 保障 体系 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0221 is 2.25576 over 128 frames.
+BAC009S0906W0222 建设 国家 级 农作物 御制 中 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0222 is 2.09222 over 202 frames.
+BAC009S0906W0223 完善 农作物品种 试验 和 种子 监测 设施 条件 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0223 is 2.12794 over 228 frames.
+BAC009S0906W0224 建设 水产 遗传 育种 中心 和 原粮 中 畅 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0224 is 1.93238 over 251 frames.
+BAC009S0906W0225 渔政 渔港 建设 工程 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0225 is 2.1688 over 102 frames.
+BAC009S0906W0226 建设 一批 大型 渔政 传 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0226 is 2.13344 over 108 frames.
+BAC009S0906W0227 加强 与 激励 和 管理 信息 系统 键 摄 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0227 is 2.18866 over 175 frames.
+BAC009S0906W0228 <SPOKEN_NOISE> 动 植物 保护 工程 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0228 is 2.02875 over 94 frames.
+BAC009S0906W0229 健全 六 及 动物 疫病 防控 体系 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0229 is 2.11858 over 196 frames.
+BAC009S0906W0230 健全 兽药 质量 安全 监管 和 动物 技术 支撑 体系 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0230 is 2.0762 over 260 frames.
+BAC009S0906W0231 建设 四级 农作物 病虫 疫情 监测 防控 体系 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0231 is 2.05556 over 239 frames.
+BAC009S0906W0232 完善 监测 防控 监管 等 设施 设备 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0232 is 2.2829 over 187 frames.
+BAC009S0906W0233 农产 品 质量 安全 简易 检测 能力 建设 工程 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0233 is 2.20265 over 194 frames.
+BAC009S0906W0234 改 扩建 检验 检测 实验 室 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0234 is 2.19281 over 164 frames.
+BAC009S0906W0235 建设 不 及 产品 质量 安全 研究 中心 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0235 is 2.36266 over 189 frames.
+BAC009S0906W0236 补充 建设 一批 不 及 专业 质检 中心 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0236 is 2.16339 over 204 frames.
+BAC009S0906W0237 构建 全国 农产 品 质量 安全 侧重 信息 预警 平 谈 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0237 is 2.13158 over 313 frames.
+BAC009S0906W0238 乡镇 农业 公共 服务 能力 建设 工程 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0238 is 2.25511 over 176 frames.
+BAC009S0906W0239 农业 机械 化 推广 经 工程 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0239 is 2.346 over 125 frames.
+BAC009S0906W0240 加大 对 秸秆 机械 化 和 收集 困 几 句 配套 的 支持 力度 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0240 is 2.09198 over 350 frames.
+BAC009S0906W0241 完善 农业 气象 等 方面 的 航空 站 和 作业 起降 点 基础 设施 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0241 is 2.14191 over 240 frames.
+BAC009S0906W0242 扶持 农机 服务 组织 发展 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0242 is 2.05658 over 114 frames.
+BAC009S0906W0243 农业 信息 化 建设 工程 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0243 is 2.25828 over 99 frames.
+BAC009S0906W0244 开展 农业 物 联网 应用 示范 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0244 is 2.19957 over 168 frames.
+BAC009S0906W0245 加大 天然 草原 工程 实施 力度 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0245 is 2.05209 over 180 frames.
+BAC009S0906W0246 加强 京津 封杀 园区 的 治理 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0246 is 1.97388 over 184 frames.
+BAC009S0906W0247 据 加强 三江源 等 地区 裁员 生态 建设 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0247 is 2.1024 over 224 frames.
+BAC009S0906W0248 开展 草原 自然 保护 区 建设 和 男方 草地 综合 治理 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0248 is 2.0536 over 256 frames.
+BAC009S0906W0249 加快 实施 牧民 定居 工程 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0249 is 2.18924 over 148 frames.
+BAC009S0906W0250 人工 中 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0250 is 2.12739 over 88 frames.
+BAC009S0906W0251 新型 农村 人才 培养 工程 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0251 is 2.06296 over 141 frames.
+BAC009S0906W0252 必须 从 国情 和 农业 发展 实际 出发 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0252 is 2.07714 over 177 frames.
+BAC009S0906W0253 不 可能 跟 自然规律 抗衡 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0253 is 2.30859 over 131 frames.
+BAC009S0906W0254 无 止境 的 重复 过去 十年 的 金融 增长 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0254 is 2.12796 over 156 frames.
+BAC009S0906W0256 企业 与 某 个 领域 称王称霸 的 一 刻 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0256 is 2.15197 over 146 frames.
+BAC009S0906W0257 往往 就 是 公司 陷入 灾难 的 开始 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0257 is 2.26429 over 134 frames.
+BAC009S0906W0258 市场 给予 他 的 估值 却 异常 克制 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0258 is 2.0508 over 199 frames.
+BAC009S0906W0259 以 <SPOKEN_NOISE> 年 <SPOKEN_NOISE> 度 为 八 点 <SPOKEN_NOISE> 美元 的 盈利 预测 为 准 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0259 is 2.02605 over 260 frames.
+BAC009S0906W0260 苹果 市盈率 仅 以 五 倍 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0260 is 2.12039 over 118 frames.
+BAC009S0906W0261 莫 说 跟 其他 创意 十足 的 科技 股 相提并论 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0261 is 2.03893 over 211 frames.
+BAC009S0906W0262 比 之 大事 有 所 不 如 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0262 is 2.05918 over 147 frames.
+BAC009S0906W0263 苹果 早晚 将 不值钱 过期 的 后尘 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0263 is 2.20487 over 180 frames.
+BAC009S0906W0265 不 同 的 地方 多于 同意 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0265 is 2.26365 over 105 frames.
+BAC009S0906W0266 从 随身听 到 智能 电话 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0266 is 2.27656 over 112 frames.
+BAC009S0906W0267 苹果 的 拿手好戏 是 把 市场 上 霸主 拉下马 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0267 is 2.161 over 194 frames.
+BAC009S0906W0268 确认 消费 者 喜新厌旧 后 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0268 is 2.33368 over 128 frames.
+BAC009S0906W0269 快速 建立 苹果 产品 服务 为 核心 的 生态 系统 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0269 is 2.29891 over 183 frames.
+BAC009S0906W0270 透过 不 断 的 更新 换代 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0270 is 2.39422 over 93 frames.
+BAC009S0906W0271 索尼 黑莓 以致 诺基亚 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0271 is 2.16709 over 119 frames.
+BAC009S0906W0272 在 最 风光 的 时候 看 不 见 来自 颠 复 者 的 威胁 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0272 is 2.24653 over 204 frames.
+BAC009S0906W0273 从 不可一世 到 遭 对手 边缘 化 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0273 is 2.27151 over 150 frames.
+BAC009S0906W0274 消费 者 三星 可能 适用 于 苹果 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0274 is 2.04508 over 212 frames.
+BAC009S0906W0277 对 投资 者 大有 参考 价值 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0277 is 2.42333 over 108 frames.
+BAC009S0906W0278 <SPOKEN_NOISE> 年 至 <SPOKEN_NOISE> 年 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0278 is 1.94846 over 148 frames.
+BAC009S0906W0279 标 普 五百 指数 是 指 冠军 宝座 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0279 is 2.12787 over 148 frames.
+BAC009S0906W0281 四大 天王 平均 累计 回报 高 达 一千 点 <SPOKEN_NOISE> 分 之 八十二 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0281 is 1.9999 over 289 frames.
+BAC009S0906W0282 对于 标志 同期 的 三十 百分 <SPOKEN_NOISE> 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0282 is 2.06402 over 238 frames.
+BAC009S0906W0283 四大 天王 平均 回报 仅 百分 之 十五 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0283 is 2.10458 over 169 frames.
+BAC009S0906W0284 明显 跑出 标 普 五百 指数 的 百分 之 九十九 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0284 is 2.23048 over 200 frames.
+BAC009S0906W0286 销售 也 总 有 饱和 的 一天 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0286 is 2.05307 over 144 frames.
+BAC009S0906W0287 苹果 能否 的 发育 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0287 is 2.35092 over 102 frames.
+BAC009S0906W0290 从 市场 始终 不 愿 给予 苹果 较高 估值 可见 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0290 is 2.1668 over 198 frames.
+BAC009S0906W0291 管理 层 眼光 <SPOKEN_NOISE> 一 点 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0291 is 2.14985 over 132 frames.
+BAC009S0906W0292 苹果 进军 汽车 产业 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0292 is 2.21828 over 104 frames.
+BAC009S0906W0294 倒闭 对此 有 保留 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0294 is 2.23946 over 155 frames.
+BAC009S0906W0295 库克 由此 亿 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0295 is 2.05943 over 105 frames.
+BAC009S0906W0297 汽车 是 苹果 下 一 个 颠 复 目标 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0297 is 2.44316 over 131 frames.
+BAC009S0906W0298 在 商界 信贷 <SPOKEN_NOISE> 万人 民 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0298 is 1.8944 over 169 frames.
+BAC009S0906W0299 人气 不逊 乔布斯 在世 之 时 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0299 is 2.2442 over 138 frames.
+BAC009S0906W0300 是 济世 报 值此 均 曾 与 库克 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0300 is 1.98583 over 201 frames.
+BAC009S0906W0302 仍 将 往往 越南 城市 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0302 is 2.12426 over 151 frames.
+BAC009S0906W0303 有 黑客 在 网络 上 都 受 车主 信息 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0303 is 2.28578 over 164 frames.
+BAC009S0906W0304 雪铁龙 车主 信息 泄露 规模 和 十万 套 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0304 is 2.02353 over 179 frames.
+BAC009S0906W0305 该 平台 上 显示 的 漏洞 状态 是 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0305 is 2.2344 over 147 frames.
+BAC009S0906W0306 漏洞 已 通知 厂商 厂商 忽略 该 漏洞 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0306 is 2.1507 over 165 frames.
+BAC009S0906W0307 该 公司 内部 相关 人士 回应 称 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0307 is 2.37245 over 133 frames.
+BAC009S0906W0308 雪铁龙 的 客户 数据 存放 在 专业 数据 库 中 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0308 is 2.04368 over 180 frames.
+BAC009S0906W0309 对 数据 库 设有 监控 记录 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0309 is 2.28904 over 148 frames.
+BAC009S0906W0310 对 用户 信息 做 足 了 保密 工作 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0310 is 2.20447 over 119 frames.
+BAC009S0906W0311 有 <SPOKEN_NOISE> 业内 人士 分析 指出 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0311 is 2.43381 over 135 frames.
+BAC009S0906W0312 车 企 在 信息 安全 方面 的 投入 不 足以 将 越来 越 成为 其 软肋 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0312 is 2.0177 over 296 frames.
+BAC009S0906W0313 其中 近 一半 的 漏洞 都 可能 造成 网站 用户 的 信息 泄露 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0313 is 2.20536 over 193 frames.
+BAC009S0906W0314 背后 涉及 到 百万 车主 的 信息 安全 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0314 is 2.29939 over 162 frames.
+BAC009S0906W0315 而 绝 大多 数 漏洞 状态 都 是 为 联系 到 厂商 和 厂商 忽略 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0315 is 2.25485 over 213 frames.
+BAC009S0906W0316 汽车 这个 行业 缺乏 成熟 的 网络 安全 管理 体系 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0316 is 2.22049 over 193 frames.
+BAC009S0906W0317 网络 运营 人员 的 安全 素质 有 待 提高 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0317 is 2.33246 over 123 frames.
+BAC009S0906W0318 很多 车 企 网站 是 外包 给 的 公司 开发 的 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0318 is 2.01902 over 209 frames.
+BAC009S0906W0319 没 有 交付 信息 安全 公司 进行 评估 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0319 is 2.44886 over 178 frames.
+BAC009S0906W0320 因此 更 可能 留 下 信息 安全 风险 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0320 is 2.34445 over 131 frames.
+BAC009S0906W0321 用户 隐私 遭 泄露 的 问题 日益 突出 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0321 is 2.23002 over 156 frames.
+BAC009S0906W0322 如果 许多 传统 制造 业 的 企业 一 样 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0322 is 2.15307 over 151 frames.
+BAC009S0906W0323 车 企 曾 大 转化 互联 网 思维 以及 加强 互联 网 安全 管控 的 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0323 is 1.95594 over 319 frames.
+BAC009S0906W0324 要 跟 上 互联 网 发展 的 步伐 不 容易 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0324 is 2.20864 over 162 frames.
+BAC009S0906W0325 随着 互联 网 快速 发展 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0325 is 2.59721 over 94 frames.
+BAC009S0906W0326 这 类 专业人才 往往 集中 在 互联 网 企业 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0326 is 2.21733 over 154 frames.
+BAC009S0906W0327 而 车 企 相对 缺乏 这 类 人才 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0327 is 2.09948 over 121 frames.
+BAC009S0906W0328 网络 安全 管理 体系 方面 投资 非常 大 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0328 is 2.42201 over 139 frames.
+BAC009S0906W0329 涉及 人才 软件 硬件 服务 以及 管理 等 方面 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0329 is 2.23189 over 194 frames.
+BAC009S0906W0330 互联 网 企业 也是 一 步步 投入 不 断 完善 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0330 is 2.26233 over 151 frames.
+BAC009S0906W0331 不 同 行业 在 网络 安全 方面 投入 比例 不 已 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0331 is 2.25653 over 182 frames.
+BAC009S0906W0332 预计 汽车 行业 在 网络 安全 方面 投入 往往 少 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0332 is 2.13582 over 247 frames.
+BAC009S0906W0333 一些 车 企 为了 节约 成本 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0333 is 2.2951 over 110 frames.
+BAC009S0906W0334 往往 数据 库 服务 器 都 放在 供 网 上 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0334 is 2.00291 over 162 frames.
+BAC009S0906W0335 这样 很 容易 被 黑客 攻破 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0335 is 2.37118 over 111 frames.
+BAC009S0906W0336 一旦 发现 系统 有 漏洞 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0336 is 2.3633 over 105 frames.
+BAC009S0906W0337 将 及时 采取 主动 或 被动 措施 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0337 is 2.32354 over 115 frames.
+BAC009S0906W0338 服务 认为 自己 被 暗指 问题 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0338 is 1.96303 over 186 frames.
+BAC009S0906W0339 但 检测 结果 的 一 场 并 不 能 就 证实 运动 员 使用 违禁 药物 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0339 is 2.22602 over 216 frames.
+BAC009S0906W0340 因为 导致 这 项 数值 不 动 的 原因 有 很多 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0340 is 2.11829 over 154 frames.
+BAC009S0906W0341 包括 高于 训练 和 身体 过度 消耗 后 立刻 接受 检测 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0341 is 2.03847 over 217 frames.
+BAC009S0906W0342 因此 我 请求 世界 反 兴奋剂 机构 回顾 前后 所有 的 数据 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0342 is 2.26456 over 240 frames.
+BAC009S0906W0343 盘点 昆仑 决 <SPOKEN_NOISE> 物 学 战 搜狐 体育 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0343 is 2.05338 over 286 frames.
+BAC009S0906W0344 无 疑 是 擂台 上 最 难 引爆 肾上腺素 的 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0344 is 2.19791 over 167 frames.
+BAC009S0906W0345 令 拳 迷 记忆犹新 的 只 占 不计其数 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0345 is 2.03265 over 174 frames.
+BAC009S0906W0346 而 这些 战斗 也 成为 了 圈 内 的 经典 谈资 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0346 is 2.09379 over 205 frames.
+BAC009S0906W0347 在 数百 场 的 巅峰 对决 中 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0347 is 2.13873 over 126 frames.
+BAC009S0906W0348 步伐 诸多 脍炙人口 的 标准 之 站 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0348 is 2.06527 over 145 frames.
+BAC009S0906W0349 十二 月 二十八 日 逾 三十一 日 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0349 is 2.19634 over 131 frames.
+BAC009S0906W0350 下面 小 编 将 盘点 本 年度 迄今 为止 昆仑 决 惨烈 血战 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0350 is 2.25492 over 304 frames.
+BAC009S0906W0353 北京 时间 七 月 二十八 日 晚 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0353 is 2.39999 over 107 frames.
+BAC009S0906W0354 这 场 对决 惨烈 程度 超出 了 所有 人 的 想象 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0354 is 2.2449 over 153 frames.
+BAC009S0906W0355 比赛 开始 后 仅仅 秒 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0355 is 2.16282 over 103 frames.
+BAC009S0906W0356 不 求 的 跑步 变得 对方 的 手机 割 破 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0356 is 2.00867 over 173 frames.
+BAC009S0906W0357 初一 的 血口 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0357 is 2.07003 over 95 frames.
+BAC009S0906W0358 伴随 着 双方 激战 的 火爆 升级 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0358 is 2.07927 over 131 frames.
+BAC009S0906W0359 不 求 头部 的 伤口 进一步 扩大 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0359 is 2.37289 over 112 frames.
+BAC009S0906W0360 几乎 全部 被 鲜血 复 盖 的 半边 身体 令人 触目 惊心 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0360 is 2.06716 over 203 frames.
+BAC009S0906W0361 双方 的 主机 对 宏大 场面 接连 上演 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0361 is 1.85435 over 183 frames.
+BAC009S0906W0362 的 周期 刁钻 很大 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0362 is 1.87368 over 125 frames.
+BAC009S0906W0363 轴 交替 使用 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0363 is 2.31164 over 86 frames.
+BAC009S0906W0364 令人 防 不胜 防 不 求 的 周期 则 更 据 者 霸气 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0364 is 1.8731 over 216 frames.
+BAC009S0906W0365 以 大刀阔斧 的 白种 砸 者 为主 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0365 is 1.95777 over 163 frames.
+BAC009S0906W0366 凶悍 直接 大开 大和 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0366 is 1.87331 over 114 frames.
+BAC009S0906W0367 加之 其 半生 浴血 的 又 见 媒体 破 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0367 is 1.95133 over 171 frames.
+BAC009S0906W0368 自从 地 走出 的 地 王 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0368 is 2.11565 over 122 frames.
+BAC009S0906W0369 不 求 久负盛名 到 对于 技术 开始 发挥 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0369 is 1.95177 over 203 frames.
+BAC009S0906W0370 令 对手 不 敢 贸然 进 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0370 is 2.32673 over 102 frames.
+BAC009S0906W0371 不 得 不 暂停 比赛 进行 处理 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0371 is 2.14314 over 131 frames.
+BAC009S0906W0372 双方 均 向 对手 发起 了 不 遗 馀 力 地 猛攻 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0372 is 2.07231 over 158 frames.
+BAC009S0906W0373 这 场 史诗 级 的 <SPOKEN_NOISE> 血战 在 两 强者 最 后 的 对决 中 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0373 is 2.03318 over 256 frames.
+BAC009S0906W0374 结束 铃声 的 强项 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0374 is 2.05278 over 119 frames.
+BAC009S0906W0375 以 争议性 的 点数 优势 宣告 获胜 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0375 is 2.09149 over 212 frames.
+BAC009S0906W0376 浑身 是 血 的 不 求 由于 头部 三 处 动漫 破裂 失学 过多 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0376 is 2.04537 over 236 frames.
+BAC009S0906W0377 被 立刻 送往 医院 接受 治疗 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0377 is 2.12004 over 144 frames.
+BAC009S0906W0378 也 被 送往 医院 进行 抢救 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0378 is 2.26215 over 131 frames.
+BAC009S0906W0379 对于 任何 一 个 目睹 了 场 比赛 过程 的 来讲 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0379 is 2.10556 over 155 frames.
+BAC009S0906W0380 这 场 史诗 级 今天 需 战 中 没 有 失败 者 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0380 is 2.09454 over 166 frames.
+BAC009S0906W0383 <SPOKEN_NOISE> 年 六月 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0383 is 2.32281 over 96 frames.
+BAC009S0906W0384 昆仑 决 熊 山城 重庆 江南区 管 重创 上阵 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0384 is 1.98848 over 296 frames.
+BAC009S0906W0385 面对 身高 臂 展 明显 占优 的 对手 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0385 is 2.29552 over 174 frames.
+BAC009S0906W0386 并 没 有 采取 矮个子 拳手 惯用 的 闪击 式 打法 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0386 is 2.10645 over 240 frames.
+BAC009S0906W0387 而是 王 十足 的 对手 进行 正面 逼近 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0387 is 2.18591 over 157 frames.
+BAC009S0906W0388 亚 <SPOKEN_NOISE> 的 优势 继续 扩大 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0388 is 2.19805 over 111 frames.
+BAC009S0906W0389 标志 性 的 重击 力道 陈 的 后手 重拳 纷纷 和 出 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0389 is 1.97639 over 282 frames.
+BAC009S0906W0390 在 其 早退 无 人 提及 之 下 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0390 is 1.95529 over 135 frames.
+BAC009S0906W0391 主业 的 所 累 很快 便 被 提出 大片 鲜红 的 淤血 疤痕 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0391 is 2.02314 over 299 frames.
+BAC009S0906W0392 经验 丰富 的 亚 <SPOKEN_NOISE> 开始 刻意 放缓 节奏 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0392 is 2.10867 over 191 frames.
+BAC009S0906W0393 对 已 是 强弩之末 的 对手 进行 消化 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0393 is 2.12822 over 165 frames.
+BAC009S0906W0394 此时 的 祖业 扶 人 已经 肿胀 的 完全 封闭 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0394 is 1.85664 over 251 frames.
+BAC009S0906W0395 智能 依靠 顽强 的 意识 进行 支撑 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0395 is 2.20351 over 126 frames.
+BAC009S0906W0396 来 的 组合 拳 强 主业 中 击倒 然而 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0396 is 1.84188 over 205 frames.
+BAC009S0906W0397 意志 力 竞争 的 白俄罗斯 特种兵 被 没 有 就此 放弃 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0397 is 2.15728 over 213 frames.
+BAC009S0906W0398 顽强 的 意志 力 博得 了 对手 晋级 全场 观众 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0398 is 2.06296 over 194 frames.
+BAC009S0906W0399 比赛 在 两 名 <SPOKEN_NOISE> 者 最后 的 对决 中 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0399 is 2.2448 over 137 frames.
+BAC009S0906W0400 比赛 结果 已经 无 需 裁判 的 裁定 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0400 is 2.11461 over 153 frames.
+BAC009S0906W0401 但 两人 比赛 后 的 面部 状况 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0401 is 2.30451 over 131 frames.
+BAC009S0906W0402 夺得 了 自己 在 昆仑 坛 史 上 的 第 二 场 重要 胜利 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0402 is 2.06505 over 256 frames.
+BAC009S0906W0404 布拉格 芯片 狂 怒 接受 了 宣传 媒体 拍照 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0404 is 1.96669 over 290 frames.
+BAC009S0906W0405 我们 可以 清晰 地 结婚 介质 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0405 is 2.08703 over 166 frames.
+BAC009S0906W0406 今天 确定 了 上映 日期 <SPOKEN_NOISE> 年 四月 十七 日 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0406 is 2.16819 over 253 frames.
+BAC009S0906W0407 这 是 后年 <SPOKEN_NOISE> 技 的 一 个 黄金 上映 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0407 is 2.0362 over 236 frames.
+BAC009S0906W0408 看来 更加 影视 他 的 初恋 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0408 is 2.22446 over 102 frames.
+BAC009S0906W0409 问 到 他们 在 法国 拍戏 病情 的 细节 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0409 is 2.06967 over 135 frames.
+BAC009S0906W0410 陈 <SPOKEN_NOISE> 也 拒绝 回答 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0410 is 2.28256 over 113 frames.
+BAC009S0906W0411 但 就 希望 外界 给予 他们 发展 空间 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0411 is 2.20712 over 156 frames.
+BAC009S0906W0412 搜狐 娱乐 讯 据 香港 媒体 报道 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0412 is 2.53726 over 138 frames.
+BAC009S0906W0413 早前 传媒 更 拍 到 <SPOKEN_NOISE> 盛 霖 时尚 颖 住所 短剧 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0413 is 1.94957 over 264 frames.
+BAC009S0906W0414 妇女 链 纸包不住火 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0414 is 2.06094 over 103 frames.
+BAC009S0906W0415 两人 于 暂停 晨曦 相对 <SPOKEN_NOISE> 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0415 is 2.03444 over 198 frames.
+BAC009S0906W0416 感情 一日千里 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0416 is 2.20804 over 82 frames.
+BAC009S0906W0418 城市 安 两天 液 没 洗澡 刷牙 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0418 is 1.9704 over 113 frames.
+BAC009S0906W0419 某 和 侯 堂 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0419 is 2.00689 over 120 frames.
+BAC009S0906W0420 搜狐 娱乐 讯 据 台湾 媒体 报道 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0420 is 2.95951 over 113 frames.
+BAC009S0906W0421 香港 女星 吴 <SPOKEN_NOISE> 导演 陈 可 辛 爱情 长跑 十八 年 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0421 is 2.09937 over 215 frames.
+BAC009S0906W0422 虽然 没 有 注册 结婚 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0422 is 2.49556 over 83 frames.
+BAC009S0906W0423 但 两人 关系 比 一般 夫妻 更加 紧密 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0423 is 2.37997 over 206 frames.
+BAC009S0906W0424 她 日前 被 媒体 募集 与 陈 可 辛 在 大街 上 逛街 血拼 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0424 is 2.12281 over 221 frames.
+BAC009S0906W0425 且 沿途 有说有笑 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0425 is 2.33493 over 88 frames.
+BAC009S0906W0426 一路 上 都 是 指 紧扣 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0426 is 2.12525 over 102 frames.
+BAC009S0906W0427 甜蜜 恩爱 的 模样 仿佛 热恋 中 的 情侣 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0427 is 2.04082 over 143 frames.
+BAC009S0906W0428 搜狐 娱乐 讯 据 香港 媒体 报道 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0428 is 2.89145 over 116 frames.
+BAC009S0906W0429 一直 邀请 之 担任 经理 人 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0429 is 2.03424 over 161 frames.
+BAC009S0906W0430 并 兼任 李嘉欣 净利 润 及 处理 旗 下 企业 他 的 合约 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0430 is 2.01537 over 296 frames.
+BAC009S0906W0431 执法 人员 将 尽 苏 押解 回 温州 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0431 is 2.14574 over 166 frames.
+BAC009S0906W0432 温州 水库 涉案 县 男女 浮尸 女方 <SPOKEN_NOISE> 前 行为 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0432 is 1.97499 over 260 frames.
+BAC009S0906W0433 温州 接到 一名 发生 火灾 已 造成 <SPOKEN_NOISE> 死亡 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0433 is 2.2278 over 189 frames.
+BAC009S0906W0434 温州 沙城 接到 一名 房 今晨 翻 生活 在 造成 三人 死亡 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0434 is 1.95475 over 213 frames.
+BAC009S0906W0436 商场 接到 永安 路 武汉 一名 房 发生 火灾 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0436 is 1.90157 over 239 frames.
+BAC009S0906W0437 一 时 一零 分 或 是 完全 扑灭 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0437 is 2.02073 over 145 frames.
+BAC009S0906W0438 火灾 造成 <SPOKEN_NOISE> 死亡 <SPOKEN_NOISE> 受伤 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0438 is 2.26635 over 107 frames.
+BAC009S0906W0439 伤者 目前 在 解放 军 第 <SPOKEN_NOISE> 医院 进行 治疗 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0439 is 2.09795 over 179 frames.
+BAC009S0906W0441 温州 惊现 最 牛 菜场 温州 的 状元 农贸市场 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0441 is 2.25715 over 212 frames.
+BAC009S0906W0443 满 采用 支付 宝 扫 码 父亲 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0443 is 2.08564 over 105 frames.
+BAC009S0906W0444 听说 过 段 时间 还要 上 场 智能 <SPOKEN_NOISE> 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0444 is 2.08543 over 183 frames.
+BAC009S0906W0445 用 智能 称重 将 自动 生死 二维 码 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0445 is 2.1329 over 147 frames.
+BAC009S0906W0446 支付 宝 扫 一 下 <SPOKEN_NOISE> 付款 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0446 is 2.01055 over 126 frames.
+BAC009S0906W0447 温州 美女 学 霸 降幅 非洲之角 较 当地 小学 生 汉语 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0447 is 1.98091 over 203 frames.
+BAC009S0906W0448 马力 嫌 等 为 志愿 者 将 远赴 非洲之角 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0448 is 2.16254 over 227 frames.
+BAC009S0906W0449 温州 老人 买房 超 <SPOKEN_NOISE> 零 万 建 养老 院 政府 遭 限制 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0449 is 2.06172 over 357 frames.
+BAC009S0906W0450 为了 实现 退休 后 能 剑鱼座 养老 机构 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0450 is 2.27605 over 172 frames.
+BAC009S0906W0451 为 更多 的 老人 安度 晚年 的 心愿 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0451 is 2.19591 over 137 frames.
+BAC009S0906W0452 浙江 温州 一 老人 拿出 全部 继续 并 卖掉 两 套房 子 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0452 is 2.21058 over 175 frames.
+BAC009S0906W0453 筹款 <SPOKEN_NOISE> 万 经 年 建成 养老 院 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0453 is 1.97232 over 225 frames.
+BAC009S0906W0454 捐给 当地 慈善 部门 后 却 遭 人 限制 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0454 is 2.08607 over 203 frames.
+BAC009S0906W0455 温州 苍南县 看守 所 民警 宿舍 楼 起火 无 人员 伤亡 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0455 is 2.30693 over 208 frames.
+BAC009S0906W0456 八月 三日 上午 一一 时 左右 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0456 is 2.26812 over 218 frames.
+BAC009S0906W0457 温州 苍南县 看守 所 宿舍 起火 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0457 is 2.29738 over 148 frames.
+BAC009S0906W0458 该 市 苍南县 公安 局 直属 县 看守 所 突发 火情 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0458 is 2.12725 over 198 frames.
+BAC009S0906W0459 所 内 民警 宿舍 楼 突发 大火 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0459 is 2.24606 over 101 frames.
+BAC009S0906W0460 在 看守 所 干 剪辑 消防 人员 的 扑救 下 火势 很快 被 扑灭 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0460 is 2.06898 over 208 frames.
+BAC009S0906W0461 温州 话 到底 有 <SPOKEN_NOISE> 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0461 is 2.08552 over 90 frames.
+BAC009S0906W0463 大家 对 重话 难懂 这 是 <SPOKEN_NOISE> 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0463 is 2.05797 over 130 frames.
+BAC009S0906W0464 一直 被 认为 是 中国 最 难 学习 的 房源 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0464 is 2.12015 over 170 frames.
+BAC009S0906W0465 温州 贩卖 婴儿 大案 女 医生 简称 婴儿 疑似 让 后 卖掉 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0465 is 1.99563 over 255 frames.
+BAC009S0906W0466 警方 先后 解救 了 六 婴儿 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0466 is 1.98951 over 160 frames.
+BAC009S0906W0467 有 个 被 送往 苍南 福利院 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0467 is 1.95742 over 172 frames.
+BAC009S0906W0468 图 为 其中 一名 被 解救 的 孩子 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0468 is 2.17198 over 117 frames.
+BAC009S0906W0469 温州 集资 诈骗 案 会 给 情人 小三 味素 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0469 is 2.14596 over 297 frames.
+BAC009S0906W0470 二十九 岁 的 某 被控 前 一 二万 元 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0470 is 1.99023 over 198 frames.
+BAC009S0906W0471 温州 血液 里 遭 追杀 凶手 行凶 过程 中 被 打死 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0471 is 2.04117 over 198 frames.
+BAC009S0906W0472 陆续 有 人 从 乐清 赶往 平阳 法院 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0472 is 1.88068 over 210 frames.
+BAC009S0906W0473 法院 内外 依据 局 了 <SPOKEN_NOISE> 多 人 等待 开庭 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0473 is 1.95124 over 217 frames.
+BAC009S0906W0474 温州 首家 支付 宝 菜市 场 启动 一 周 很多 摊主 不 会 用 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0474 is 2.20328 over 244 frames.
+BAC009S0906W0475 状元 农贸市场 内 挂 着 支付 宝 的 宣传 牌 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0475 is 2.12597 over 178 frames.
+BAC009S0906W0476 温州 商 坠楼 身亡 发 前 五 场 从 将 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0476 is 1.95073 over 227 frames.
+BAC009S0906W0477 中学 一名 男生 从 宿舍 楼 五 楼 楼顶 坠楼 身亡 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0477 is 1.95304 over 272 frames.
+BAC009S0906W0478 用 强 中学 校长 也是 坠楼 学生 的 老师 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0478 is 2.25281 over 201 frames.
+BAC009S0906W0479 印象 利他 性格 是 比较 开朗 的 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0479 is 2.24194 over 112 frames.
+BAC009S0906W0480 没 有 发现 近期 有 变化 目前 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0480 is 2.09322 over 143 frames.
+BAC009S0906W0481 警方 对此 事 展开 调查 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0481 is 2.26101 over 115 frames.
+BAC009S0906W0482 温州 高速 公路 大米 遭 强 续 名 涉案 人员 已 落网 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0482 is 2.09785 over 253 frames.
+BAC009S0906W0483 白花花 的 大米 撒拉语 的 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0483 is 2.08376 over 98 frames.
+BAC009S0906W0484 来 周边 大批 村民 哄抢 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0484 is 2.0336 over 142 frames.
+BAC009S0906W0485 一 场 考验 的 米 <SPOKEN_NOISE> 保卫 战 悄然 打响 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0485 is 2.11359 over 210 frames.
+BAC009S0906W0486 温州 鹿城 警方 发布 通报 称 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0486 is 2.25951 over 131 frames.
+BAC009S0906W0487 五 名 涉嫌 参与 抢 米 的 犯罪 嫌疑 人 先后 被 抓获 并 拘留 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0487 is 2.14119 over 327 frames.
+BAC009S0906W0488 民警 仍 在 对 区域 涉 事 人员 进行 调查 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0488 is 2.30985 over 190 frames.
+BAC009S0906W0489 温州 高速 车 和 <SPOKEN_NOISE> <SPOKEN_NOISE> 包 大米 遭 强奸 续 带头 被 拒 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0489 is 1.93417 over 335 frames.
+BAC009S0906W0490 一辆 货车 在 经历 温 高速 温州 段 发生 事故 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0490 is 2.03708 over 253 frames.
+BAC009S0906W0491 涉案 的 其中 两 名 嫌疑 人 盛 某 女 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0491 is 2.13627 over 152 frames.
+BAC009S0906W0492 永嘉县 谢 某 女 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0492 is 2.08146 over 134 frames.
+BAC009S0906W0493 永嘉 县 人 已 被 鹿城 警方 依法 行政 拘留 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0493 is 2.16556 over 201 frames.
+LOG (apply-cmvn-online[5.4]:main():apply-cmvn-online.cc:135) Applied online CMVN to 353 files, or 184280 frames.
+BAC009S0906W0494 航班 名 乘客 推 撞 人 被 判 <SPOKEN_NOISE> 一一 <SPOKEN_NOISE> 渐进 
+LOG (nnet3-latgen-faster[5.4]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance BAC009S0906W0494 is 1.91231 over 299 frames.
+LOG (nnet3-latgen-faster[5.4]:main():nnet3-latgen-faster.cc:255) Time taken 1071.29s: real-time factor assuming 100 frames/sec is 0.580242
+LOG (nnet3-latgen-faster[5.4]:main():nnet3-latgen-faster.cc:258) Done 353 utterances, failed for 0
+LOG (nnet3-latgen-faster[5.4]:main():nnet3-latgen-faster.cc:260) Overall log-likelihood per frame is 2.15812 over 61543 frames.
+LOG (nnet3-latgen-faster[5.4]:~CachingOptimizingCompiler():nnet-optimize.cc:698) 0.426 seconds taken in nnet3 compilation total (breakdown: 0.18 compilation, 0.126 optimization, 0 shortcut expansion, 0.0269 checking, 0.000183 computing indexes, 0.0931 misc.) + 0 I/O.
+LOG (lattice-scale[5.4]:main():lattice-scale.cc:107) Done 353 lattices.
+# Accounting: time=1072 threads=1
+# Ended (code 0) at Wed Jul 15 09:41:02 CST 2020, elapsed time 1072 seconds

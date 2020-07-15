@@ -1,0 +1,18 @@
+# This file was created by the command:
+# steps/nnet3/xconfig_to_configs.py --xconfig-file exp/chain/tdnn/configs/network.xconfig --config-dir exp/chain/tdnn/configs/
+# It contains the same content as ./xconfig but it was parsed,
+# default config values were set, 
+# and Descriptors (input=xxx) were normalized.
+# See also ./xconfig.expanded.1
+
+input name=input dim=40
+fixed-affine-layer name=lda affine-transform-file=exp/chain/tdnn/configs/lda.mat delay=0 dim=200 input=Append(Offset(input, -2), Offset(input, -1), input, Offset(input, 1), Offset(input, 2)) write-init-config=True
+relu-renorm-layer name=tdnn1 dim=1024 input=lda max-change=0.75 ng-affine-options= self-repair-scale=1e-05 target-rms=1.0
+relu-renorm-layer name=tdnn2 dim=1024 input=Append(Offset(tdnn1, -1), Offset(tdnn1, 2)) max-change=0.75 ng-affine-options= self-repair-scale=1e-05 target-rms=1.0
+relu-renorm-layer name=tdnn3 dim=1024 input=Append(Offset(tdnn2, -2), Offset(tdnn2, 1)) max-change=0.75 ng-affine-options= self-repair-scale=1e-05 target-rms=1.0
+relu-renorm-layer name=tdnn4 dim=1024 input=Append(Offset(tdnn3, -3), Offset(tdnn3, 3)) max-change=0.75 ng-affine-options= self-repair-scale=1e-05 target-rms=1.0
+relu-renorm-layer name=tdnn5 dim=1024 input=Append(Offset(tdnn4, -5), Offset(tdnn4, 1)) max-change=0.75 ng-affine-options= self-repair-scale=1e-05 target-rms=1.0
+relu-renorm-layer name=prefinal-chain dim=1024 input=tdnn5 max-change=0.75 ng-affine-options= self-repair-scale=1e-05 target-rms=0.5
+output-layer name=output bias-stddev=0.0 dim=6508 include-log-softmax=False input=prefinal-chain learning-rate-factor=1.0 max-change=1.5 ng-affine-options= objective-type=linear output-delay=0 param-stddev=0.0 presoftmax-scale-file=
+relu-renorm-layer name=prefinal-xent dim=1024 input=tdnn5 max-change=0.75 ng-affine-options= self-repair-scale=1e-05 target-rms=0.5
+output-layer name=output-xent bias-stddev=0.0 dim=6508 include-log-softmax=True input=prefinal-xent learning-rate-factor=5.0 max-change=1.5 ng-affine-options= objective-type=linear output-delay=0 param-stddev=0.0 presoftmax-scale-file=

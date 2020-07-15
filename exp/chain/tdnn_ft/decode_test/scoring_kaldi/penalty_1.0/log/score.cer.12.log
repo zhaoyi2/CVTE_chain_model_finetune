@@ -1,0 +1,5 @@
+# cat exp/chain/tdnn_train/decode_test/scoring_kaldi/penalty_1.0/12.chars.txt | compute-wer --text --mode=present ark:exp/chain/tdnn_train/decode_test/scoring_kaldi/test_filt.chars.txt ark,p:- >& exp/chain/tdnn_train/decode_test/cer_12_1.0 
+# Started at Wed Jul 15 09:47:25 CST 2020
+#
+# Accounting: time=0 threads=1
+# Ended (code 0) at Wed Jul 15 09:47:25 CST 2020, elapsed time 0 seconds

@@ -1,0 +1,6 @@
+# cat exp/chain/tdnn_train/decode_test/scoring_kaldi/wer_details/per_utt | utils/scoring/wer_ops_details.pl --special-symbol '***' | sort -b -i -k 1,1 -k 4,4rn -k 2,2 -k 3,3 > exp/chain/tdnn_train/decode_test/scoring_kaldi/wer_details/ops 
+# Started at Wed Jul 15 09:47:15 CST 2020
+#
+utils/scoring/wer_ops_details.pl: Note: handling as utf-8 text
+# Accounting: time=1 threads=1
+# Ended (code 0) at Wed Jul 15 09:47:16 CST 2020, elapsed time 1 seconds
