@@ -2,8 +2,10 @@
 - funtune chain model base on cvte open source model using aishell1 data
 - using the open source GMM for frame align 
 # Explanation
-- you do not need training any GMM series model
-- using apply-cmvn-online instead of apply-cmvn during training and decoding
+- cvte supply a chain model trained using more than 2000h audio data
+- cvte supply a 3-gram LM model trained with 1000 GB text;
+- this project does not need training any GMM series model
+- this project support online cmvn, since "apply-cmvn-online" is used during the training and decoding
 # Install
 - kaldi
 # Usage
@@ -25,7 +27,7 @@
 - cer 11.10% 
 # Reference
 - you can cd exp/chain/tdnn_ft/decode_test/scoreing_kaldi to view recognition resultssee and cer
-- also supply the funtune model,you can download it in the link below
-- 链接:https://pan.baidu.com/s/1NvsjV3R7PQy7q7YNITZS8g  密码:su1h
+- also supply the funtune model,you can download it in the link 链接:https://pan.baidu.com/s/1NvsjV3R7PQy7q7YNITZS8g  密码:su1h
+- cvte open source model link http://kaldi-asr.org/models/0002_cvte_chain_model.tar.gz
 
 
