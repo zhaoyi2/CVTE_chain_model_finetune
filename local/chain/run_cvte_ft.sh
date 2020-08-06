@@ -24,7 +24,7 @@ init_dir=exp/chain/tdnn
 gmm_dir=exp/chain/tri6b
 tree_dir=exp/chain/tri6b_tree
 
-stage=2
+stage=0
 train_stage=-4
 nj=8
 
@@ -42,7 +42,7 @@ if [ $stage -le 0 ]; then
   steps/align_fmllr.sh --cmd "$train_cmd" --nj ${nj} data/${data_set}_sp data/lang $gmm_dir ${ali_dir}
 fi
 
-if [ $stage -le -2 ]; then
+if [ $stage -le 1 ]; then
   # Get the alignments as lattices (gives the LF-MMI training more freedom).
   # use the same num-jobs as the alignments
   nj=$(cat $ali_dir/num_jobs) || exit 1;
@@ -52,7 +52,7 @@ if [ $stage -le -2 ]; then
 fi
 
 
-if [ $stage -le 1 ]; then
+if [ $stage -le 2 ]; then
   # extract mfcc_hires for AM finetuning
   utils/copy_data_dir.sh ${data_dir}_sp ${data_dir}_sp_fbk
   rm -f ${data_dir}_sp_fbk/{cmvn.scp,feats.scp}
@@ -64,30 +64,7 @@ if [ $stage -le 1 ]; then
   utils/fix_data_dir.sh ${data_dir}_sp_fbk
 fi
 
-if [ $stage -le -2 ]; then
-  echo "$0: creating lang directory $lang with chain-type topology"
-  # Create a version of the lang/ directory that has one state per phone in the
-  # topo file. [note, it really has two states.. the first one is only repeated
-  # once, the second one has zero or more repeats.]
-  if [ -d $lang ]; then
-    if [ $lang/L.fst -nt data/lang/L.fst ]; then
-      echo "$0: $lang already exists, not overwriting it; continuing"
-    else
-      echo "$0: $lang already exists and seems to be older than data/lang..."
-      echo " ... not sure what to do.  Exiting."
-      exit 1;
-    fi
-  else
-    cp -r data/lang $lang
-    silphonelist=$(cat $lang/phones/silence.csl) || exit 1;
-    nonsilphonelist=$(cat $lang/phones/nonsilence.csl) || exit 1;
-    # Use our special topology... note that later on may have to tune this
-    # topology.
-    steps/nnet3/chain/gen_topo.py $nonsilphonelist $silphonelist >$lang/topo
-  fi
-fi
-
-if [ $stage -le -3 ]; then
+if [ $stage -le 3 ]; then
     echo Prepare the configuration file for model training from cvte model file tdnn
     if [ ! -f $dir ]; then
      cp -r $init_dir $dir
@@ -95,7 +72,7 @@ if [ $stage -le -3 ]; then
     fi
 fi
 
-if [ $stage -le 5 ]; then
+if [ $stage -le 4 ]; then
   if [[ $(hostname -f) == *.clsp.jhu.edu ]] && [ ! -d $dir/egs/storage ]; then
     utils/create_split_dir.pl \
      /export/b0{3,4,5,6}/$USER/kaldi-data/egs/wsj-$(date +'%m_%d_%H_%M')/s5/$dir/egs/storage $dir/egs/storage
