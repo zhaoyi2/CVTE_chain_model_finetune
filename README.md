@@ -22,6 +22,7 @@
 - get the alignments as lattices
 - generate volume-perturbed data (for train)
 - prepare config file for finetune such as model、den.fst、phone_lm.fst and tree
+- train on top of the previous dnn model(final.md --> init.mdl) for 6 epochs 
 - decode the test data use finetune model with apply-cmvn-online
 # Result(aishell1 test data) 
 - cer 11.10% 
